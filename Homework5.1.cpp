@@ -34,7 +34,7 @@ public:
 		elementcounts++;
 	}
 	int get_element(int indx) {
-		if (indx < arraysize) {
+		if (indx < elementcounts) {
 			return array[indx];
 		}
 		else {
