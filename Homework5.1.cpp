@@ -3,7 +3,6 @@
 
 class smart_array {
 private:
-	smart_array* s_a;
 	int* array;
 	int arraysize;
 	int elementcounts;
@@ -15,7 +14,7 @@ public:
 		arraysize = elems;
 	}
 	~smart_array() {
-		delete[] s_a;
+		delete[] array;
 	}
 	void add_element(int elem) {
 		if (elementcounts < arraysize) {
