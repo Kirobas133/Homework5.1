@@ -9,6 +9,10 @@ private:
 
 public:
 	smart_array(int elems) {
+		if (elems == 0) {
+			std::cout << "Warning! Attempt to create array zero lenth! Lenth changed to 1!";
+			elems = 1;
+		}
 		elementcounts = 0;
 		array = new int[elems];
 		arraysize = elems;
@@ -33,7 +37,7 @@ public:
 		}
 		elementcounts++;
 	}
-	int get_element(int indx) {
+	int get_element(size_t indx) {
 		if (indx < elementcounts) {
 			return array[indx];
 		}
